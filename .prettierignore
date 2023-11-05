@@ -7,3 +7,4 @@ flatpak
 flatpak-build
 sign/
 .github/workflows/build-base.yml
+playwright-report
