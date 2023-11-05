@@ -188,6 +188,7 @@
     "simple-keyboard": "3.5.33",
     "steam-shortcut-editor": "3.1.1",
     "tslib": "2.5.0",
+    "xvfb-maybe": "^0.2.1",
     "zod": "3.21.4"
   },
   "scripts": {
@@ -197,7 +198,7 @@
     "test": "jest",
     "test-watch": "jest --watch --maxWorkers=25%",
     "test:ci": "jest --runInBand --silent",
-    "test:e2e": "vite build && cross-env CI=e2e playwright test",
+    "test:e2e": "vite build && cross-env CI=e2e xvfb-maybe -- playwright test",
     "release:linux": "vite build && electron-builder -p always --linux deb AppImage rpm pacman tar.xz snap",
     "release:mac": "vite build && electron-builder -p always --mac --x64 --arm64",
     "release:win": "vite build && electron-builder -p always --win portable --x64",
